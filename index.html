@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legend of Zelda</title>
+
+    <!--Alunos: Nicolas Nogueira Orsi e Victor Avila-->
+
+    <!--Fontes: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+    <!--Código CSS-->
+
+    <style>
+        body
+        {
+            margin: 0;
+        }
+
+        .cabecalho
+        {
+
+            background-color: #2D5A3D	;
+            padding: 25px;
+
+            /* Posicionamento: */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #titulo-principal
+        {
+            
+            margin: 0;
+
+            /* Texto: */
+            text-transform: uppercase;
+            font-family: "Cinzel Decorative", sans-serif;
+            color: #F2D16B;
+            font-size: 48px;
+        }
+
+        #subtitulo-principal
+        {
+            
+            margin-top: 2px;
+            
+            /* Texto: */
+            font-family: "EB Garamond", sans-serif;
+            color: #F3E9C6;
+            text-transform: none;
+            font-size: 28px;
+        }
+
+        #imagem-principal
+        {
+            width: 622px;
+            height: 350px;
+            border: double #F2D16B 3px;
+        }
+
+        .banner
+        {
+            background-color: #E3EBDC;
+        }
+
+        .banner-conteudo
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        main
+        {
+            background-color: #F4F1EA;
+        }
+
+        .historia
+        {
+            padding: 25px;
+        }
+
+        .historia-conteudo
+        {
+            display: flex;
+            max-width: 1300px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .historia-imagem img
+        {
+            width: 400px;
+            height: auto;
+            border: double #F2D16B 3px;
+        }
+
+        .jogos
+        {
+            background-color: #ECE7D8;
+            padding: 25px;
+        }
+
+        .jogos-container
+        {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card-jogo
+        {
+            border: double #F2D16B 3px;
+            border-radius: 10px;
+            background-color: #F4F1EA;
+        }       
+        
+        .card-jogo h3, .card-jogo p
+        {
+            text-align: center;
+        }
+
+        .card-jogo img
+        {
+            width: 100%;
+            height: auto;
+        }
+
+        .jogos p
+        {
+            text-align: center;
+        }
+
+        h2
+        {
+            font-family: "EB Garamond";
+            text-transform: uppercase;
+            font-size: 32px;
+            color: #7A5C0E;
+            text-align: center;
+        }
+
+        h3
+        {
+            font-family: "EB Garamond", sans-serif; 
+            color: #1F4A33;
+            font-size: 20px;
+        }
+
+        p
+        {
+            font-family: "EB Garamond", sans-serif;
+            font-size: 19px;
+        }
+
+        .personagens
+        {
+            padding: 25px;
+        }
+
+        .personagens-container
+        {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card-personagem
+        {
+            border: double #F2D16B 3px;
+            border-radius: 10px;
+        }
+
+        .card-personagem h3, .card-personagem p
+        {
+            text-align: center;
+        }
+
+        .card-personagem img
+        {
+            width: 100%;
+            height: auto;
+        }       
+
+        .referencias
+        {
+            background-color: #E3EBDC;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;    
+            padding: 5px;
+            padding-bottom: 30px;
+        }
+
+        .banner-conteudo p
+        {
+            margin-top: 0px;
+        }
+
+        .rodape
+        {
+            background-color: #2D5A3D;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .rodape p
+        {
+            color:#F3E9C6;
+        }
+
+        #subtitulo-rodape
+        {
+            color:#F3E9C6;
+            margin-top: 0px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+
+        <h1 id="titulo-principal">The Legend of Zelda</h1>
+        <h2 id="subtitulo-principal">Conheça o Universo de Hyrule</h2>
+        <img src="imagem-cabeçalho.jpg" alt="Paisagem" id="imagem-principal">
+
+    </header>
+
+
+    <main>
+
+        <!-- INÍCIO -->
+        <section class="banner" id="inicio">
+
+            <div class="banner-conteudo">
+
+                <h2>Bem-vindo ao Reino de Hyrule!</h2>
+
+                <p>Conheça o universo de The Legend of Zelda, uma das franquias mais famosas da história dos videogames.</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- HISTÓRIA -->
+        <section class="historia" id="historia">
+
+            <h2>A História de Zelda</h2>
+
+            <div class="historia-conteudo">
+
+                <div class="historia-texto">
+
+                    <p>
+                        The Legend of Zelda é uma franquia de jogos
+                        desenvolvida pela Nintendo. Sua estreia aconteceu
+                        em 1986, com o lançamento do primeiro jogo para
+                        o Nintendo Entertainment System.
+                    </p>
+
+                    <p>
+                        A maioria dos jogos acompanha Link, um jovem
+                        herói que precisa enfrentar diversos desafios
+                        para proteger o reino de Hyrule.
+                    </p>
+
+                    <p>A princesa Zelda também possui um papel fundamental na franquia, estando relacionada à proteção do reino e ao poder da Triforce.</p>
+
+                </div>
+
+                <div class="historia-imagem">
+
+                    <img src="img-hyrule.webp" alt="Paisagem do reino de Hyrule">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JOGOS -->
+        <section class="jogos" id="jogos">
+
+            <h2>Principais Jogos da Franquia</h2>
+
+            <p>Conheça alguns dos jogos mais importantes de Zelda.</p>
+
+            <div class="jogos-container">
+
+                <div class="card-jogo">
+
+                    <img src="img-zelda01.webp" alt="The Legend of Zelda">
+
+                    <h3>The Legend of Zelda</h3>
+
+                    <p>
+                        Lançado em 1986, foi o primeiro jogo da franquia.
+                        Nele, Link precisa salvar a princesa Zelda
+                        e enfrentar Ganon.
+                    </p>
+
+                </div>
+
+
+                <div class="card-jogo">
+
+                    <img src="img-ocarina_of_time.jpg" alt="Ocarina of Time">
+
+                    <h3>Ocarina of Time</h3>
+
+                    <p>
+                        Lançado em 1998, apresenta Link viajando
+                        entre a infância e a vida adulta para
+                        impedir os planos de Ganondorf.
+                    </p>
+
+                </div>
+
+
+                <div class="card-jogo">
+                    
+                    <img src="img-windwaker.jpg" alt="The Wind Waker">
+
+                    <h3>The Wind Waker</h3>
+
+                    <p>
+                        Lançado em 2002, apresenta uma aventura
+                        em um enorme oceano, onde Link explora
+                        diversas ilhas.
+                    </p>
+
+                </div>
+
+
+                <div class="card-jogo">
+
+                    <img src="img-twilight.png" alt="Twilight Princess">
+
+                    <h3>Twilight Princess</h3>
+
+                    <p>
+                        Lançado em 2006, apresenta uma aventura
+                        em que Link precisa salvar Hyrule de
+                        uma dimensão conhecida como Reino do Crepúsculo.
+                    </p>
+
+                </div>
+
+
+                <div class="card-jogo">
+
+                    <img src="img-bow.png" alt="Breath of the Wild">
+
+                    <h3>Breath of the Wild</h3>
+
+                    <p>
+                        Lançado em 2017, apresenta um enorme
+                        mundo aberto para explorar, com desafios,
+                        santuários e inimigos.
+                    </p>
+
+                </div>
+
+
+                <div class="card-jogo">
+
+                    <img src="img-totk.jpg" alt="Tears of the Kingdom">
+
+                    <h3>Tears of the Kingdom</h3>
+
+                    <p>
+                        Lançado em 2023, expande o universo
+                        de Breath of the Wild, apresentando
+                        novas habilidades e ilhas flutuantes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERSONAGENS -->
+        <section class="personagens" id="personagens">
+
+            <h2>Personagens Principais</h2>
+
+            <div class="personagens-container">
+
+                <div class="card-personagem">
+
+                    <h3>Link</h3>
+
+                    <img src="img-link.png" alt="Link">
+
+                    <p>
+                        O herói da franquia, responsável por
+                        enfrentar as forças do mal e proteger Hyrule.
+                    </p>
+
+                </div>
+
+
+                <div class="card-personagem">
+
+                    <h3>Princesa Zelda</h3>
+
+                    <img src="img-zelda.png" alt="Princesa Zelda">
+
+                    <p>
+                        Princesa de Hyrule e personagem fundamental
+                        para a história da franquia.
+                    </p>
+
+                </div>
+
+
+                <div class="card-personagem">
+
+                    <h3>Ganondorf</h3>
+
+                    <img src="img-ganondorf.png" alt="Ganondorf">
+
+                    <p>
+                        Um dos principais vilões da franquia,
+                        conhecido por tentar conquistar Hyrule.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CURIOSIDADES -->
+        <section class="curiosidades" id="curiosidades">
+
+            <h2>Curiosidades Sobre Zelda</h2>
+
+            <h3>Você sabia?</h3>
+
+            <ul>
+
+                <li>
+                    O primeiro jogo da franquia foi lançado em 1986.
+                </li>
+
+                <li>
+                    O nome Zelda foi inspirado em Zelda Fitzgerald.
+                </li>
+
+                <li>
+                    A Triforce representa Poder, Sabedoria e Coragem.
+                </li>
+
+                <li>
+                    Link e Zelda são personagens diferentes.
+                </li>
+
+                <li>
+                    Ocarina of Time foi o primeiro jogo da franquia em 3D.
+                </li>
+
+            </ul>
+
+
+            <h3>Linha do tempo</h3>
+
+            <ol>
+
+                <li>1986 - The Legend of Zelda</li>
+
+                <li>1998 - Ocarina of Time</li>
+
+                <li>2002 - The Wind Waker</li>
+
+                <li>2006 - Twilight Princess</li>
+
+                <li>2017 - Breath of the Wild</li>
+
+                <li>2023 - Tears of the Kingdom</li>
+
+            </ol>
+
+        </section>
+
+
+        <!-- REFERÊNCIAS -->
+        <section class="referencias">
+
+            <h2>Saiba Mais</h2>
+
+            <p>
+                Para conhecer mais sobre a franquia,
+                acesse o site oficial da Nintendo.
+            </p>
+
+            <a href="https://www.zelda.com/" target="_blank">
+                Site Oficial de The Legend of Zelda
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+
+        <h2 id="subtitulo-rodape">Sobre este Trabalho</h2>
+        <p>Projeto acadêmico de Desenvolvimento Web.</p>
+        <p>Franquia pertencente à Nintendo.</p>
+        <br>
+
+    </footer>
+
+</body>
+
+</html>
