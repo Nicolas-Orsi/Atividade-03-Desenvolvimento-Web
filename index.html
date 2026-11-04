@@ -303,7 +303,117 @@
             animation-duration: 10s;
             animation-iteration-count: infinite;
         }
-        
+
+        /* Tablet */
+        @media (max-width: 768px)
+        {
+            #titulo-principal
+            {
+                font-size: 36px;
+            }
+
+            #imagem-principal
+            {
+                max-width: 90%;
+                height: auto;
+            }
+
+            .historia-conteudo
+            {
+                flex-direction: column;
+            }
+
+            .historia-imagem
+            {
+                max-width: 100%;
+            }
+
+            .jogos-container, .personagens-container
+            {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .curiosidades-container
+            {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
+
+        /*Celular*/
+        @media (max-width: 480px)
+        {
+            #titulo-principal
+            {
+                font-size: 27px;
+                text-align: center;
+            }
+
+            #substituto-principal
+            {
+                font-size: 21px;
+                text-align: center;
+            }
+
+            #imagem-principal
+            {
+                width: 100%;
+                height: auto;
+            }
+
+            .jogos-container, .personagens-container
+            {
+                grid-template-columns: 1fr;
+            }
+
+            .historia-imagem img
+            {
+                width: 100%;
+            }
+
+            .banner-conteudo
+            {
+                padding: 15px;
+                height: auto;
+                min-height: 250px;
+            }
+
+            .curiosidades-container
+            {
+                flex-direction: column;
+            }
+
+            .botao
+            {
+                font-size: 15px;
+                padding: 8px 12px;
+            }
+
+            .korok
+            {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        @keyframes aparecer
+        {
+            from
+            {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to
+            {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body *:not(.korok){
+            animation: aparecer 1s ease;
+        }
     </style>
 </head>
 
